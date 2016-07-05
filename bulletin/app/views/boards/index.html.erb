@@ -1,9 +1,14 @@
+<head>
+<title>Townboard</title>
+</head>
+<div ="header">
 <h1>Town Board</h1>
 <p>list some stuff!</p>
+</div>
 <br>
 
 <ul>
   <% @boards.each do |board| %>
-    <li> Looking <%= link_to board.title, board_path(board) %> ...</li>
+    <li> <%= board.posts.count %> Post is looking <%= link_to board.title, board_path(board.id) %> ...</li>
   <% end %>
 </ul>

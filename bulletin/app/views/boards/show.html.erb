@@ -1,1 +1,21 @@
-<%= @board.inspect %>
+<%= @post.inspect %>
+
+<h2><%= @post.title =%></h2>
+
+
+<table>
+  <tr>
+    <th width="60%">Post Title</th>
+    <th width="10%">Replies</th>
+    <th width="30%">Last Post</th>
+  </tr>
+  <% for post in @board.posts %>
+    <tr>
+      <td><%= link_to (post.title), post_path(post.id) %>
+      <td class="right"></td>
+      <td><%= link_to "Show", post %></td>
+      <td><%= link_to "Edit", edit_post_path(post) %></td>
+      <td><%= link_to "Destroy", post, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
