@@ -1,15 +1,15 @@
-<h1>Looking <%= @board.title =%> ...</h1>
+<div class="middle"><h1><br><br>Looking <%= @board.title =%> ...</h1></div>
 <div class="board">
 <table>
   <tr>
     <th class="left" width="55%">Post Title</th>
-    <th width="10%">Replies</th>
-    <th width="10%">Last update</th>
+    <th width="5%">Replies</th>
+    <th width="20%">Last update</th>
 
  </tr>
   <% for post in @board.posts %>
     <tr>
-      <td><%= link_to (post.title), board_post_path(post) %>
+      <td class="left"><%= link_to (post.title), board_post_path(post) %>
       <td class="middle"><%= post.comments.count %>
       <td class="right"><%= post.updated_at.localtime.to_formatted_s(:short) %>
       <td><%= link_to "Edit", edit_board_post_path(post) %></td>
@@ -18,4 +18,4 @@
   <% end %>
 </table>
 </div>
-<p><%=link_to "Back to Boards", boards_path %> | <%= link_to "Add a post", new_board_post_path(@board) %></p>
+<p class="middle"><%=link_to "Back to Boards", boards_path %> | <%= link_to "Add a post", new_board_post_path(@board) %></p>

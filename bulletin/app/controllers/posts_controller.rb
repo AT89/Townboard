@@ -10,13 +10,14 @@ class PostsController < ApplicationController
     @comments = Comment.all
   end
   def new
-    @post = Post.new
+    @board = Board.find(params[:board_id])
+    @post = @board.posts.new
   end
   def create
-    @board = Board.find(params[:id])
-    @post = Post.create(post_params)
+    @board = Board.find(params[:board_id])
+    @post = @board.posts.create(post_params)
     @post.save
-    redirect_to board_post_path(@board, @post)
+    redirect_to board_path(@board)
   end
 
   def destroy

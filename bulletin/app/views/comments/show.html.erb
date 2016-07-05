@@ -1,4 +1,4 @@
-<h1>Comment for post: <br><%=  @post.title %> </h1>
+<h1 class="middle"><br><br>Comment for post: <br><%=  @post.title %> </h1>
 
 <h2> Comment at <%= @comment.updated_at.localtime.to_formatted_s(:short) %> by <%= @comment.author %></h2>
  <br>
@@ -6,3 +6,5 @@
  <p> **image goes here</p>
 
  <p><%= @comment.comment %></p>
+
+<p><%=link_to "Back to Boards", board_path %></p>

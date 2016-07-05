@@ -15,11 +15,16 @@
  */
 *{
   font-family: 'Bangers', cursive;
+  text-align: center;
 }
 h1{
   font-size: 60px;
-  background-image: image-url("./images/sign.jpg");
-  background-image: asset-data-url("sign.jpg");
+  background-image: url("sign.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  padding: 100px;
 }
 p{
   font-size: 30px;
@@ -35,4 +40,8 @@ table{
 }
 .left{
   text-align: left;
+}
+.board{
+  margin: auto;
+  width: 50%;
 }
