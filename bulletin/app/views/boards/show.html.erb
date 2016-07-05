@@ -1,12 +1,12 @@
 <h1>Looking <%= @board.title =%> ...</h1>
-<p><%=link_to "Boards", boards_path %></p>
+<p><%=link_to "Back to Boards", boards_path %> | <%= link_to "Add a post", new_board_post_path(@board) %></p>
 
 <table>
   <tr>
     <th width="50%">Post Title</th>
     <th width="10%">Replies</th>
 
-  </tr>
+ </tr>
   <% for post in @board.posts %>
     <tr>
       <td><%= link_to (post.title), board_post_path(post) %>
@@ -17,6 +17,3 @@
     </tr>
   <% end %>
 </table>
-
-<br>
-<%= link_to "Add a post", new_board_post_path(@board) %>

@@ -17,10 +17,13 @@
   font-family: 'Bangers', cursive;
 }
 h1{
-  font-size: 40px;
+  font-size: 70px;
   background-image: image-url("./images/sign.jpg");
   background-image: asset-data-url("sign.jpg");
 }
 p{
   font-size: 30px;
+}
+table{
+  font-size: 25px;
 }

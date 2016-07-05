@@ -4,8 +4,9 @@
 </div>
 <br>
 
-<ul>
+
   <% @boards.each do |board| %>
-    <li> <%= board.posts.count %> Post is looking <%= link_to board.title, board_path(board.id) %> ...</li>
+  <table>
+    <td> <%= board.posts.count %> Post is looking <%= link_to board.title, board_path(board.id) %> ...</td>
   <% end %>
-</ul>
+</table>

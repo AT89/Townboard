@@ -17,9 +17,9 @@
   <td><%= comment.comment%> ...</td>
   <td><%= @comment.author %></td>
   <td><%= @comment.created_at.localtime.to_formatted_s(:short) %></td>
-  <td><%= link_to "Edit", edit_comment_path(comment) %></td>
-  <td><%= link_to "Destroy", comment, :confirm => 'Are you sure?', :method => :delete %></td>
+  <td><%= link_to "Edit", edit_board_post_comment_path(@board, @post,comment) %></td>
+  <td><%= link_to "Destroy", board_post_comment_path(@board, @post, comment), :confirm => 'Are you sure?', :method => :delete %></td>
 <% end %>
 </table>
 <br>
-<%= link_to "Reply to this post", new_comment_path %>
+<p><p><%=link_to "Back to Boards", board_path %> | <%= link_to "Reply to this post", new_board_post_comment_path(@board, @post) %></p>
