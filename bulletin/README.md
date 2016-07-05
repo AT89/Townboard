@@ -25,8 +25,10 @@ More implications of this can be used for Pokemon Go, other game pickups, meetup
 
 ##User stories
 - I want to post an item to sell, users are able to comment on it to question or what not
-- I want to post an item to acquire, users are able to comment if they have it or not
-
+- I want to post an item to acquire, users are able to comment if they have it or where to suggest finding someone with it etc
+- I (as a user) want to edit/delete my post and no one else to edit/delete the post
+- I want to have a 1 click reference login (github, facebook) to make logging in painless
+- I want to have an image show in part of the description for the item
 
 ##Entity Relationship Diagram
 Index page - full o' Boards (town board) -named it Bulltin
@@ -60,6 +62,9 @@ Comments: Author-S, Comment-T
    self.timestamp_field = DateTime.now
  end
  ```
+
+ edit: i found an easier solution for timestamps
+
 ##Technologies used
 --Ruby on Rails
 --Resources of WDI General Assemly

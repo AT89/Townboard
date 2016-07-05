@@ -4,6 +4,7 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
   def show
+    @board = Board.find(params[:id])
     @post = Post.find(params[:id])
     @comment = Comment.find(params[:id])
     @comments = Comment.all
@@ -12,9 +13,16 @@ class PostsController < ApplicationController
     @post = Post.new
   end
   def create
+    @board = Board.find(params[:id])
     @post = Post.create(post_params)
     @post.save
-    redirect_to @post
+    redirect_to board_post_path(@board, @post)
+  end
+
+  def destroy
+  @post = Post.find(params[:id])
+  @post.destroy
+  redirect_to @posts
   end
 
   private
