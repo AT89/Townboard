@@ -1,5 +1,5 @@
 <h1> Reply to post</h1>
-<%= form_for @comment do |f| %>
+<%= form_for [@board, @post, @comment] do |f| %>
 
   <%= f.label :author %>
   <%= f.text_field :author %>

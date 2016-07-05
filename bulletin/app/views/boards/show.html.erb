@@ -9,7 +9,7 @@
  </tr>
   <% for post in @board.posts %>
     <tr>
-      <td class="left"><%= link_to (post.title), board_post_path(post) %>
+      <td class="left"><%= link_to (post.title), board_post_path(@board, post) %>
       <td class="middle"><%= post.comments.count %>
       <td class="right"><%= post.updated_at.localtime.to_formatted_s(:short) %>
       <td><%= link_to "Edit", edit_board_post_path(post) %></td>

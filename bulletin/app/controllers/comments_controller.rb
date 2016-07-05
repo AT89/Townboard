@@ -5,12 +5,12 @@ class CommentsController < ApplicationController
   end
   def new
     @board = Board.find(params[:board_id])
-    @post = Post.find(params[:board_id])
+    @post = Post.find(params[:post_id])
     @comment = @post.comments.new
   end
   def show
-    @board = Board.find(params[:id])
-    @post = Post.find(params[:id])
+    @board = Board.find(params[:board_id])
+    @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
   end
 

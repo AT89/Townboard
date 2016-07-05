@@ -4,10 +4,8 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
   def show
-    @board = Board.find(params[:id])
+    @board = Board.find(params[:board_id])
     @post = Post.find(params[:id])
-    @comment = Comment.find(params[:id])
-    @comments = Comment.all
   end
   def new
     @board = Board.find(params[:board_id])
