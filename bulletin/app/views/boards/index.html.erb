@@ -1,12 +1,14 @@
-<div ="top">
+<div class="middle">
 <h1>Town Board</h1>
 <p>list some stuff!</p>
 </div>
 <br>
 
-
+<div class="board">
   <% @boards.each do |board| %>
   <table>
-    <td> <%= board.posts.count %> Post is looking <%= link_to board.title, board_path(board.id) %> ...</td>
+    <td> <%= board.posts.count %> Post(s) is looking <%= link_to board.title, board_path(board.id) %> ...</td>
   <% end %>
 </table>
+</div>
+<p class="middle"> LOGIN | SIGNUP </p>

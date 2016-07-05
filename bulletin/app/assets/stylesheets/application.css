@@ -17,7 +17,7 @@
   font-family: 'Bangers', cursive;
 }
 h1{
-  font-size: 70px;
+  font-size: 60px;
   background-image: image-url("./images/sign.jpg");
   background-image: asset-data-url("sign.jpg");
 }
@@ -26,4 +26,13 @@ p{
 }
 table{
   font-size: 25px;
+}
+.right{
+  text-align: right;
+}
+.middle{
+  text-align: center;
+}
+.left{
+  text-align: left;
 }

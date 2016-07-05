@@ -1,19 +1,21 @@
 <h1>Looking <%= @board.title =%> ...</h1>
-<p><%=link_to "Back to Boards", boards_path %> | <%= link_to "Add a post", new_board_post_path(@board) %></p>
-
+<div class="board">
 <table>
   <tr>
-    <th width="50%">Post Title</th>
+    <th class="left" width="55%">Post Title</th>
     <th width="10%">Replies</th>
+    <th width="10%">Last update</th>
 
  </tr>
   <% for post in @board.posts %>
     <tr>
       <td><%= link_to (post.title), board_post_path(post) %>
-      <td><%= post.comments.count %>
-      <td><%= post.updated_at.localtime.to_formatted_s(:short) %>
+      <td class="middle"><%= post.comments.count %>
+      <td class="right"><%= post.updated_at.localtime.to_formatted_s(:short) %>
       <td><%= link_to "Edit", edit_board_post_path(post) %></td>
       <td><%= link_to "Destroy", board_post_path(@board, post), :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>
+</div>
+<p><%=link_to "Back to Boards", boards_path %> | <%= link_to "Add a post", new_board_post_path(@board) %></p>

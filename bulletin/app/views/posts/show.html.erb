@@ -1,25 +1,25 @@
 <h1><%=  @post.title %> </h1>
-<p> <%= @post.updated_at.localtime.to_formatted_s(:short) %></p>
-<h2> by <%= @post.author %> </h2>
-<br>
-<h3> asking for $for $<%= @post.value %></h3>
+<p> by <%= @post.author %> at <%= @post.updated_at.localtime.to_formatted_s(:short) %></h2>
+<p> asking for for $<%= @post.value %></p>
 <p><%=image_tag @post.image %></p>
-<p> <%= @post.description %> </h2>
+<p> <%= @post.description %> </p>
 
 
 <table>
     <tr>
       <th width="60%">Comment </th>
       <th> Postee </th>
+      <th> Time </th>
     </tr>
 
 <% @post.comments.each do |comment| %>
-  <td><%= comment.comment%> ...</td>
+  <td><%= link_to comment.comment, board_post_comment_path(@board, @post, comment)%> ...</td>
   <td><%= @comment.author %></td>
   <td><%= @comment.created_at.localtime.to_formatted_s(:short) %></td>
-  <td><%= link_to "Edit", edit_board_post_comment_path(@board, @post,comment) %></td>
+  <td><%= link_to "Edit", edit_board_post_comment_path(@board, @post, comment) %></td>
   <td><%= link_to "Destroy", board_post_comment_path(@board, @post, comment), :confirm => 'Are you sure?', :method => :delete %></td>
 <% end %>
 </table>
+
 <br>
-<p><p><%=link_to "Back to Boards", board_path %> | <%= link_to "Reply to this post", new_board_post_comment_path(@board, @post) %></p>
+<p><%=link_to "Back to Boards", board_path %> | <%= link_to "Reply to this post", new_board_post_comment_path(@board, @post) %></p>
