@@ -16,14 +16,18 @@ class PostsController < ApplicationController
   def create
     @board = Board.find(params[:board_id])
     @post = @board.posts.create(post_params)
-    @post.save
-    redirect_to board_path(@board)
+    if
+      @post.save
+      redirect_to board_path(@board)
+    else
+      render 'new'
+    end
   end
 
   def destroy
   @post = Post.find(params[:id])
   @post.destroy
-  redirect_to @posts
+  redirect_to board_path(@post.board)
   end
 
   private
