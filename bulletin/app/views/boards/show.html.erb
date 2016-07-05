@@ -1,6 +1,6 @@
 <%= @post.inspect %>
 
-<h2><%= @post.title =%></h2>
+<h1><%= @post.title =%></h1>
 
 
 <table>
@@ -13,7 +13,7 @@
     <tr>
       <td><%= link_to (post.title), post_path(post) %>
       <td><%= post.comments.count %>
-      <td> Timestamp goes here<%=  %>
+      <td><%= @post.updated_at %>
       <td><%= link_to "Edit", edit_post_path(post) %></td>
       <td><%= link_to "Destroy", post, :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>

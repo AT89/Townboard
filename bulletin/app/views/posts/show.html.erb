@@ -1,5 +1,26 @@
 <%= @post.inspect %>
+<br>
+<br>
+<%= @comment.inspect %>
 
-**not pulling up the db from post, is my controller wrong?**
+<h1><%=  @post.title %> </h1>
+<p> <%= @post.created_at %></p>
+<h2> by <%= @post.author %> </h2>
+<br>
+<h3> asking for $for $<%= @post.value %></h3>
+<p><%=image_tag @post.image %></p>
+<p> <%= @post.description %> </h2>
 
-<h1> @post.title</h1>
+
+<table>
+    <tr>
+      <th> Comment </th>
+      <th> Postee </th>
+    </tr>
+
+<% @post.comments.each do |comment| %>
+  <td><%= link_to comment.comment, comment_path(comment.id) %> ...</td>
+  <td><%= @comment.author %></td>
+  <td><%= @comment.created_at %></td>
+<% end %>
+</table>
