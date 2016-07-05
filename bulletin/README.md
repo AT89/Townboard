@@ -11,12 +11,12 @@ More implications of this can be used for Pokemon Go, other game pickups, meetup
 
 #Planning
 
-##stage 1 Implement a working rails
+##Stage 1 Implement a working rails
 -- get the rails app working with the models Boards, Posts, Comments (maybe)
 -- Minimal to no styling needed
 
 ##Stage 2 - Getting extra features
--- user logins using github or facebook
+-- user logins using github or facebook. The Update, edit, delete applies to the user.
 -- implement images (use offsite hosting such as imgur, and just use the direct link to display)
 
 ##Stage 3 - Make it look presentable
@@ -43,6 +43,8 @@ Posts - The item or thing
 |
 M.
 Comments - people can contact
+
+(will add an image later..)
 
 ##Models
 Board: Title-S
