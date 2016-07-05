@@ -1,5 +1,3 @@
-<%= @post.inspect %>
-
 <h1><%= @post.title =%></h1>
 
 
@@ -13,7 +11,7 @@
     <tr>
       <td><%= link_to (post.title), post_path(post) %>
       <td><%= post.comments.count %>
-      <td><%= @post.updated_at %>
+      <td><%= @post.updated_at.localtime.to_formatted_s(:short) %>
       <td><%= link_to "Edit", edit_post_path(post) %></td>
       <td><%= link_to "Destroy", post, :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
