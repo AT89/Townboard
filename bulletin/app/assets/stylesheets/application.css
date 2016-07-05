@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+*{
+  font-family: 'Bangers', cursive;
+}
+h1{
+  font-size: 40px;
+  background-image: url("assets/images/sign.jpg");
+}
+p{
+  font-size: 30px;
+}

@@ -11,7 +11,7 @@
   </tr>
   <% for post in @board.posts %>
     <tr>
-      <td><%= link_to (post.title), post %>
+      <td><%= link_to (post.title), post_path(post) %>
       <td><%= post.comments.count %>
       <td> Timestamp goes here<%=  %>
       <td><%= link_to "Edit", edit_post_path(post) %></td>

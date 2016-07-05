@@ -11,16 +11,16 @@ More implications of this can be used for Pokemon Go, other game pickups, meetup
 
 #Planning
 
-##Stage 1 Implement a working rails
+##Stage 1 Implement a working rails-Get it all working in rails by Tuesday PM
 -- get the rails app working with the models Boards, Posts, Comments (maybe)
 -- Minimal to no styling needed
 
-##Stage 2 - Getting extra features
+##Stage 2 - Getting extra features -1 day/Wednesday PM
 -- user logins using github or facebook. The Update, edit, delete applies to the user.
 -- implement images (use offsite hosting such as imgur, and just use the direct link to display)
 
-##Stage 3 - Make it look presentable
--- CSS ALL DAY
+##Stage 3 - Make it look presentable - Wednesday night
+-- CSS ALL DAY (re-evaluating this, prob wont be for all day)
 -- Add cute generated Avatars icons to post and replies (could use the 600 pokemon icons I have)
 
 ##User stories
