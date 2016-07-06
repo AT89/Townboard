@@ -1,3 +1,6 @@
+<% flash.each do |type, message| %>
+<p class="<%= type %>"><%= message %></p>
+<% end %>
 <%= form_for [@board, @post] do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>

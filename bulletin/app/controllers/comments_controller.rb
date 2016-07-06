@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
     @board = Board.find(params[:board_id])
     @post = Post.find(params[:post_id])
     @comments = Comment.all
+
   end
   def new
     @board = Board.find(params[:board_id])
@@ -15,22 +16,22 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
   end
-  def new
+  def create
     @board = Board.find(params[:board_id])
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create(comment_params)
-    if
-      @comment.save
-      redirect_to post_path(@post)
+    if @comment.save
+      redirect_to [@board, @post]
     else
       render 'new'
     end
   end
 
   def destroy
-  @comment = Post.find(params[:id])
+
+  @comment = Comment.find(params[:id])
   @comment.destroy
-  redirect_to post_path(spost)
+  redirect_to board_post_path
   end
 
   private

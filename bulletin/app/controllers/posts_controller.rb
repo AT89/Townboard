@@ -14,10 +14,10 @@ class PostsController < ApplicationController
   def create
     @board = Board.find(params[:board_id])
     @post = @board.posts.create(post_params)
-    if
-      @post.save
+    if @post.save
       redirect_to board_path(@board)
     else
+      flash[:alert] = "Topic requires title, author, 5-100char"
       render 'new'
     end
   end
@@ -35,9 +35,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
-  @post = Post.find(params[:id])
-  @post.destroy
-  redirect_to board_path(@post.board)
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to board_path(@post.board)
   end
 
   private

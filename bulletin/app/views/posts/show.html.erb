@@ -21,6 +21,7 @@
         <td><%= comment.created_at.localtime.to_formatted_s(:short) %></td>
         <td><%= link_to "Edit", edit_board_post_comment_path(@board, @post, comment) %></td>
         <td><%= link_to "Destroy", board_post_comment_path(@board, @post, comment), :confirm => 'Are you sure?', :method => :delete %></td>
+<br>
       <% end %>
   </table>
 </div>
