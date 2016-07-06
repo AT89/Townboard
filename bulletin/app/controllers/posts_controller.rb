@@ -22,6 +22,18 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+    @board = Board.find(params[:board_id])
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @board = Board.find(params[:board_id])
+    @post = Post.find(params[:id])
+    @post.update(post_params)
+    redirect_to board_path(@board)
+  end
+
   def destroy
   @post = Post.find(params[:id])
   @post.destroy

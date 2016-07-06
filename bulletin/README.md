@@ -67,6 +67,6 @@ Comments: Author-S, Comment-T
 
 ##Technologies used
 --Ruby on Rails
---Resources of WDI General Assemly
---nifty_scaffold
---imgur
+--Resources of WDI General Assembly
+--devise - for login authentication
+--imgur - for free image hosting

@@ -6,19 +6,19 @@
 </div>
 <div class="board">
   <table>
-        <tr>
-          <th class="left" width="60%">Comment </th>
-          <th width="20%">Postee </th>
-          <th width="20%">Time </th>
-        </tr>
+          <tr>
+            <th class="left" width="60%">Comment </th>
+            <th width="20%">Postee </th>
+            <th width="20%">Time </th>
+          </tr>
 
-    <% @post.comments.each do |comment| %>
-      <td class="left"><%= link_to comment.description, board_post_comment_path(@board, @post, comment)%></td>
-      <td><%= comment.author %></td>
-      <td><%= comment.created_at.localtime.to_formatted_s(:short) %></td>
-      <td><%= link_to "Edit", edit_board_post_comment_path(@board, @post, comment) %></td>
-      <td><%= link_to "Destroy", board_post_comment_path(@board, @post, comment), :confirm => 'Are you sure?', :method => :delete %></td>
-    <% end %>
+          <% @post.comments.each do |comment| %>
+            <td class="left"><%= link_to comment.description, board_post_comment_path(@board, @post, comment)%></td>
+            <td><%= comment.author %></td>
+            <td><%= comment.created_at.localtime.to_formatted_s(:short) %></td>
+            <td><%= link_to "Edit", edit_board_post_comment_path(@board, @post, comment) %></td>
+            <td><%= link_to "Destroy", board_post_comment_path(@board, @post, comment), :confirm => 'Are you sure?', :method => :delete %></td>
+          <% end %>
   </table>
 </div>
 <br>
