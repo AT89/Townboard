@@ -1,6 +1,8 @@
 class CommentsController < ApplicationController
 
   def show
+    @board = Board.find(params[:board_id])
+    @post = Post.find(params[:post_id])
     @comments = Comment.all
   end
   def new
