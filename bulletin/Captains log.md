@@ -9,6 +9,9 @@ CHECK-- need to figure out how to create post has a proper redirect (Do I have t
    --Does not create the post though..
 
 ##7/5/2016
-    --does not create new post, need to check now that it is nested
-    --need to add string to comment for image
-    --new comment is not working, stuck on the controller defining new
+    CHECK--does not create new post, need to check now that it is nested
+    CHECK--need to add string to comment for image
+    CHECK--new comment is not working, stuck on the controller defining new
+    --Need to add users, use devise
+    --Need to work on EDIT of CRUD
+    --Add Validation, limit chars to title to 50 chars

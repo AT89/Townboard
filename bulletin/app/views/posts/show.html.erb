@@ -1,4 +1,4 @@
-<h1 class="middle"><br><br><%= @post.title %> </h1>
+<h1><br><br><%= @post.title %> </h1>
 <div class="middle"><p> by <%= @post.author %> at <%= @post.updated_at.localtime.to_formatted_s(:short) %></p>
   <p> asking for for $<%= @post.value %></p>
   <p><%=image_tag @post.image %></p>
@@ -22,4 +22,4 @@
   </table>
 </div>
 <br>
-<p><%=link_to "Back to Boards", board_path %> | <%= link_to "Reply to this post", new_board_post_comment_path(@board, @post) %></p>
+<p><%=link_to "Back to Boards", @board %> | <%= link_to "Reply to this post", new_board_post_comment_path(@board, @post) %></p>

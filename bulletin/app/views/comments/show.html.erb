@@ -1,9 +1,9 @@
-<h1 class="middle"><br>Comment for post: <br><%=  @post.title %> </h1>
+<h1><br>Comment for post: <br><%=  @post.title %> </h1>
 
 <h2> Comment at <%= @comment.updated_at.localtime.to_formatted_s(:short) %> by <%= @comment.author %></h2>
  <br>
 
- <p> **image goes here</p>
+  <p><%=image_tag @comment.image %></p>
 
  <p><%= @comment.comment %></p>
 
