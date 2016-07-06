@@ -9,13 +9,13 @@
       <th class="left" width="55%">Post Title</th>
       <th width="5%">Comments</th>
       <th width="20%">Last update</th>
-
    </tr>
+   
     <% for post in @board.posts %>
       <tr>
-        <td class="left"><%= link_to (post.title), board_post_path(@board, post) %>
-        <td class="middle"><%= post.comments.count %>
-        <td class="right"><%= post.updated_at.localtime.to_formatted_s(:short) %>
+        <td class="left"><%= link_to (post.title), board_post_path(@board, post) %></td>
+        <td class="middle"><%= post.comments.count %></td>
+        <td class="right"><%= post.updated_at.localtime.to_formatted_s(:short) %></td>
         <td><%= link_to "Edit", edit_board_post_path(post) %></td>
         <td><%= link_to "Destroy", board_post_path(@board, post), :confirm => 'Are you sure?', :method => :delete %></td>
       </tr>

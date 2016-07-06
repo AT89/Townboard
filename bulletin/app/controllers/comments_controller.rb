@@ -27,11 +27,24 @@ class CommentsController < ApplicationController
     end
   end
 
-  def destroy
+  def edit
+    @board = Board.find(params[:board_id])
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
+  end
 
-  @comment = Comment.find(params[:id])
-  @comment.destroy
-  redirect_to board_post_path
+  def update
+    @board = Board.find(params[:board_id])
+    @post = Post.find(params[:post_id])
+    @comment = Comment.find(params[:id])
+    @comment.update(comment_params)
+    redirect_to board_post_comment_path
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to board_post_path
   end
 
   private
