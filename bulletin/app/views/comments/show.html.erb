@@ -1,10 +1,10 @@
 <h1><br>Comment for post: <br><%=  @post.title %> </h1>
 
-<h2> Comment at <%= @comment.updated_at.localtime.to_formatted_s(:short) %> by <%= @comment.author %></h2>
+<p> Comment at <%= @comment.updated_at.localtime.to_formatted_s(:short) %> by <%= @comment.author %></p>
  <br>
 
   <p><%=image_tag @comment.image %></p>
 
- <p><%= @comment.comment %></p>
+ <p><%= @comment.description %></p>
 
 <p><%=link_to "Back to Boards", board_path %></p>

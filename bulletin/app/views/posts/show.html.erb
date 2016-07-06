@@ -13,7 +13,7 @@
         </tr>
 
     <% @post.comments.each do |comment| %>
-      <td class="left"><%= link_to comment.comment, board_post_comment_path(@board, @post, comment)%></td>
+      <td class="left"><%= link_to comment.description, board_post_comment_path(@board, @post, comment)%></td>
       <td><%= comment.author %></td>
       <td><%= comment.created_at.localtime.to_formatted_s(:short) %></td>
       <td><%= link_to "Edit", edit_board_post_comment_path(@board, @post, comment) %></td>
@@ -22,4 +22,4 @@
   </table>
 </div>
 <br>
-<p><%=link_to "Back to Boards", @board %> | <%= link_to "Reply to this post", new_board_post_comment_path(@board, @post) %></p>
+<p><%=link_to "Back to Boards", @board %> | <%= link_to "Comment this post", new_board_post_comment_path(@board, @post) %></p>

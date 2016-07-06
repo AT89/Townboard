@@ -1,20 +1,2 @@
 <h1><br> Reply to post</h1>
-<%= form_for [@board, @post, @comment] do |f| %>
-
-  <%= f.label :author %>
-  <%= f.text_field :author %>
-
-  <br>
-  <%= f.label :image_URL %>
-  <%= f.text_field :image %>
-<br>
-<br>
-  <%= f.label :comment %>
-<br>
-
-<textarea name="comment[comment]" cols="80" rows="20"><%= @comment.comment %></textarea>
-
-<br>
-<br>
-  <%= f.submit %>
-  <% end %>
+<%= render 'form' %>

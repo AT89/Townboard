@@ -16,7 +16,7 @@ posts = Post.create([
   ])
 
 comments = Comment.create([
-  { author: "Chris Lorenzo", comment: "looks like a steak..", post: posts[0]},
-  { author: "Mat Zo", comment: "looks like a steak..", post: posts[1]},
-  { author: "Arty", comment: "looks like a steak..", post: posts[2]},
+  { author: "Chris Lorenzo", description: "looks like a steak..", image: "http://i.imgur.com/cDXOZ52.jpg", post: posts[0]},
+  { author: "Mat Zo", description: "looks like a steak..", image: "http://i.imgur.com/weg2K6M.gif", post: posts[1]},
+  { author: "Arty", description: "looks like a steak..", post: posts[2]},
   ])

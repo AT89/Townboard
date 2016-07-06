@@ -33,7 +33,7 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit(:author, :comment, :image)
+    params.require(:comment).permit(:author, :description, :image)
   end
 
 end
