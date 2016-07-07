@@ -1,15 +1,17 @@
 <div class="middle">
   <h1><br>Comment for post: <br><%=  @post.title %> <br>
-  <p><%=link_to "Back to Post", board_post_path %> </p>
+  <p><%=link_to "Back to Post", board_post_path(@board, @post) %> </p>
   <p> LOGIN | SIGNUP </p>
   </h1>
 
   <p> Comment at <%= @comment.updated_at.localtime.to_formatted_s(:short) %> by <%= @comment.author %></p>
    <br>
-
+<% if @comment.image %>
   <div class="image">
     <p><%=image_tag @comment.image %></p>
   </div>
+<% else %>
+<% end %>
  <p class="bodytext"><%= @comment.description %></p>
 </div>
  <div class="space">

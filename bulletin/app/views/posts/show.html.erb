@@ -4,9 +4,12 @@
 </h1>
 <div class="middle"><p> by <%= @post.author %> at <%= @post.updated_at.localtime.to_formatted_s(:short) %></p>
   <p> asking for for $<%= @post.value %></p>
+  <% if @post.image %>
     <div class="image">
       <p><%=image_tag @post.image %></p>
     </div>
+  <% else %>
+  <% end %>
   <p class="bodytext"> <%= @post.description %> </p>
 </div>
 
