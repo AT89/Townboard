@@ -17,7 +17,7 @@
 
       <% for comment in @post.comments %>
         <tr>
-          <td class="left"><%= link_to comment.description, board_post_comment_path(@board, @post, comment)%></td>
+          <td class="left" bodytext"><%= link_to comment.description, board_post_comment_path(@board, @post, comment)%></td>
           <td><%= comment.author %></td>
           <td><%= comment.created_at.localtime.to_formatted_s(:short) %></td>
           <td><%= link_to "Edit", edit_board_post_comment_path(@board, @post, comment) %></td>

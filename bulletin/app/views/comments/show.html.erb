@@ -1,4 +1,4 @@
-<div class="middle>">
+<div class="middle">
   <h1><br>Comment for post: <br><%=  @post.title %> <br>
   <p><%=link_to "Back to Post", board_post_path %> </p></h1>
 
@@ -7,7 +7,7 @@
 
     <p><%=image_tag @comment.image %></p>
 
- <p><%= @comment.description %></p>
+ <p class="bodytext"><%= @comment.description %></p>
 </div>
  <div class="space">
  </div>
