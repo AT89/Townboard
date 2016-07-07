@@ -7,8 +7,9 @@
   <p> Comment at <%= @comment.updated_at.localtime.to_formatted_s(:short) %> by <%= @comment.author %></p>
    <br>
 
+  <div class="image">
     <p><%=image_tag @comment.image %></p>
-
+  </div>
  <p class="bodytext"><%= @comment.description %></p>
 </div>
  <div class="space">

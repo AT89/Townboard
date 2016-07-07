@@ -59,3 +59,10 @@ td{
 .townboard{
   font-size: 80px;
 }
+.image{
+  max-height: auto;
+  max-width: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

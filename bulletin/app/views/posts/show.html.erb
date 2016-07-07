@@ -4,7 +4,9 @@
 </h1>
 <div class="middle"><p> by <%= @post.author %> at <%= @post.updated_at.localtime.to_formatted_s(:short) %></p>
   <p> asking for for $<%= @post.value %></p>
-  <p><%=image_tag @post.image %></p>
+    <div class="image">
+      <p><%=image_tag @post.image %></p>
+    </div>
   <p class="bodytext"> <%= @post.description %> </p>
 </div>
 
