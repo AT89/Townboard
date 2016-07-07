@@ -1,6 +1,8 @@
 <div class="middle">
   <h1><br>Comment for post: <br><%=  @post.title %> <br>
-  <p><%=link_to "Back to Post", board_post_path %> </p></h1>
+  <p><%=link_to "Back to Post", board_post_path %> </p>
+  <p> LOGIN | SIGNUP </p>
+  </h1>
 
   <p> Comment at <%= @comment.updated_at.localtime.to_formatted_s(:short) %> by <%= @comment.author %></p>
    <br>

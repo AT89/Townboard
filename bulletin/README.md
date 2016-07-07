@@ -7,7 +7,8 @@ More implications of this can be used for Pokemon Go, other game pickups, meetup
 
 -- create a bulletin board for initial boards:
   -- Gets: where users can post what they are looking for
-  -- Pushes: where users can sell what they no longer need or want to sell Electric
+  -- Pushes: where users can sell what they no longer need or want to sell etc
+  -- Board is dynamic so the admin can create a board for ANYTHING
 
 #Planning
 
@@ -70,3 +71,4 @@ Comments: Author-S, Comment-T
 --Resources of WDI General Assembly
 --devise - for login authentication
 --imgur - for free image hosting
+--function linkify(inputText) http://stackoverflow.com/questions/37684/how-to-replace-plain-urls-with-links

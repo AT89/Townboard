@@ -1,9 +1,11 @@
-<h1><br><br><%= @post.title %> <br>
-<p><%=link_to "Back to Board", @board %> | <%= link_to "Comment this post", new_board_post_comment_path(@board, @post) %></p></h1>
+<h1><br><%= @post.title %> <br>
+<p><%=link_to "Back to Board", @board %> | <%= link_to "Comment this post", new_board_post_comment_path(@board, @post) %></p>
+<p> LOGIN | SIGNUP </p>
+</h1>
 <div class="middle"><p> by <%= @post.author %> at <%= @post.updated_at.localtime.to_formatted_s(:short) %></p>
   <p> asking for for $<%= @post.value %></p>
   <p><%=image_tag @post.image %></p>
-  <p> <%= @post.description %> </p>
+  <p class="bodytext"> <%= @post.description %> </p>
 </div>
 
 <% if @post.comments.length > 0 %>
