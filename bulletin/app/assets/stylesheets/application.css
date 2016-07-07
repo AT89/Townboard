@@ -1,23 +1,35 @@
+body{
+  background-image: url("sky.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 h1{
+
   text-align: center;
   font-family: 'Bangers', cursive;
   font-size: 60px;
-  background-image: url("sign.jpg");
+  background-image: url("sign.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 400px;
   padding: 100px;
-
 }
 p{
   font-size: 30px;
-    text-align: center;
-      font-family: 'Bangers', cursive;
+  text-align: center;
+  font-family: 'Bangers', cursive;
+ -webkit-text-stroke: .2px white;
+   text-shadow: 1px 1px 0px #ffffff;
 }
 table{
   font-size: 25px;
-    font-family: 'Bangers', cursive;
+  font-family: 'Bangers', cursive;
+  text-shadow: 1px 1px 0px #ffffff;
+   -webkit-text-stroke: .1px white;
+}
+td{
+   -webkit-text-stroke: .2px white;
 }
 .right{
   text-align: right;
@@ -32,10 +44,12 @@ table{
   margin: auto;
   width: 50%;
 }
-.mainboard{
-  margin: auto;
-  width: 25%;
-}
 .alert{
   color:#f00;
  }
+.space{
+  padding-bottom: 210px;
+}
+.townboard{
+  font-size: 80px;
+}

@@ -13,5 +13,12 @@ CHECK-- need to figure out how to create post has a proper redirect (Do I have t
     CHECK--need to add string to comment for image
     CHECK--new comment is not working, stuck on the controller defining new
     --Need to add users, use devise
-    --Need to work on EDIT of CRUD
-    --Add Validation, limit chars to title to 50 chars
+    CHECK--Need to work on EDIT of CRUD
+    CHECK--Add Validation, limit chars to title to 50 chars
+##7/6/2016
+  --add users via devise
+  --make prettier buttons
+  --form labels
+  --recheck css, add space at the bottom
+  --try to format the sign better
+  --do the video recording thing
