@@ -1,12 +1,13 @@
-<h1><br>Comment for post: <br><%=  @post.title %> <br>
-<p><%=link_to "Back to Post", board_post_path %> </p></h1>
+<div class="middle>">
+  <h1><br>Comment for post: <br><%=  @post.title %> <br>
+  <p><%=link_to "Back to Post", board_post_path %> </p></h1>
 
-<p> Comment at <%= @comment.updated_at.localtime.to_formatted_s(:short) %> by <%= @comment.author %></p>
- <br>
+  <p> Comment at <%= @comment.updated_at.localtime.to_formatted_s(:short) %> by <%= @comment.author %></p>
+   <br>
 
-  <p><%=image_tag @comment.image %></p>
+    <p><%=image_tag @comment.image %></p>
 
  <p><%= @comment.description %></p>
-
+</div>
  <div class="space">
  </div>

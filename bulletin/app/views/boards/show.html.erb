@@ -10,7 +10,7 @@
       <th width="5%">Comments</th>
       <th width="20%">Last update</th>
    </tr>
-   
+
     <% for post in @board.posts %>
       <tr>
         <td class="left"><%= link_to (post.title), board_post_path(@board, post) %></td>
@@ -21,4 +21,6 @@
       </tr>
     <% end %>
   </table>
+</div>
+<div class="space">
 </div>

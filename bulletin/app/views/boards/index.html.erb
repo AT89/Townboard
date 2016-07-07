@@ -6,7 +6,7 @@
 </div>
 <div>
 <p>  <% @boards.each do |board| %>
-<%  board.posts.count %> Post(s) is looking <%= link_to board.title, board_path(board.id) %> ...
+<%=  board.posts.count %> Post(s) is looking <%= link_to board.title, board_path(board.id)  %> ...
   <% end %>
 </p>
 </div>
