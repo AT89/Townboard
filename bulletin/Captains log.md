@@ -22,3 +22,8 @@ CHECK-- need to figure out how to create post has a proper redirect (Do I have t
   --recheck css, add space at the bottom
   --try to format the sign better
   --do the video recording thing
+##7/7/2016
+  --form labels
+  --prettier buttons
+  --navigation buttons go to next/prev post
+  --navigation on shows

@@ -42,6 +42,8 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    @board = Board.find(params[:board_id])
+    @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
     @comment.destroy
     redirect_to board_post_path
