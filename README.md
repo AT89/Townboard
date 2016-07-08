@@ -1,42 +1,74 @@
 #GA Project 2: Electric Boogaloo
-- (the project readme file is inside the bulletin folder, my origin remote was set outside, whoops)
 
-##Stuffs needed
-- User login implementation
-  - only the user that posted is allowed to edit and delete and edit/delete the comments
-  - comentee can edit/delete
-  - contact info in the user (only users can see)
-    - setup a request contact to see their email or phone number. by default that contact information is hidden.
+##GA bulletin board
+-- Generally wanted to a Ruby on Rails app that can simply be a 'town board'. Users are people who are in the same location. This essentially bypasses Craigslist because the additional step of meeting someone is eliminated, since you are both in the same/near location.
 
-##Captains log
+More implications of this can be used for Pokemon Go, other game pickups, meetups, collaboration postings
 
--7/4/2016
- -CHECK.. need to figure out how to get post show to work
+-- create a bulletin board for initial boards:
+  -- Gets: where users can post what they are looking for
+  -- Pushes: where users can sell what they no longer need or want to sell etc
+  -- Board is dynamic so the admin can create a board for ANYTHING
 
- -CHECK.. need to figure out how to create post has a proper redirect (Do I have to make an index? I want it to redirect to posts/show.html)
-    -CHECK..  do we need to nest it? A: YES
-    -CHECK.. redirects to Index.
-    --Does not create the post though..
+#Planning
 
--7/5/2016
-     -CHECK..does not create new post, need to -CHECK.. now that it is nested
-     -CHECK..need to add string to comment for image
-     -CHECK..new comment is not working, stuck on the controller defining new
-     --Need to add users, use devise
-     -CHECK..Need to work on EDIT of CRUD
-     -CHECK..Add Validation, limit chars to title to 50 chars
--7/6/2016
-   -LOL. add users via devise
-   -make prettier buttons
-   -form labels
-   -CHECK.. css, add space at the bottom
-   -try to format the sign better
-   -do the video recording thing
+##Stage 1 Implement a working rails-Get it all working in rails by Tuesday PM
+-- get the rails app working with the models Boards, Posts, Comments (maybe)
+-- Minimal to no styling needed
 
+##Stage 2 - Getting extra features -1 day/Wednesday PM
+-- user logins using github or facebook. The Update, edit, delete applies to the user.
+-- implement images (use offsite hosting such as imgur, and just use the direct link to display)
+
+##Stage 3 - Make it look presentable - Wednesday night
+-- CSS ALL DAY (re-evaluating this, prob wont be for all day)
+-- Add cute generated Avatars icons to post and replies (could use the 600 pokemon icons I have)
+
+##User stories
+- I want to post an item to sell, users are able to comment on it to question or what not
+- I want to post an item to acquire, users are able to comment if they have it or where to suggest finding someone with it etc
+- I (as a user) want to edit/delete my post and no one else to edit/delete the post
+- I want to have a 1 click reference login (github, facebook) to make logging in painless
+- I want to have an image show in part of the description for the item
+
+##Entity Relationship Diagram
+Index page - full o' Boards (town board) -named it Bulltin
+.1   .1
+|     \
+|     M.-Users-.1-M.-Posts and Comments (and will need to make a join table)
+M.     
+Boards - Topic board (sell, buy, looking for, looking to sell)
+.1
+|
+M.
+Posts - The item or thing
+.1
+|
+M.
+Comments - people can contact
+
+(will add an image later..)
+
+##Models
+Board: Title-S
+
+Posts: Title-S, Author-S, Description-T, Value-I, Image-S
+
+Comments: Author-S, Comment-T
+
+ Dates can auto generate with:
+
+ ```
+ def generate_timestamp
+   self.timestamp_field = DateTime.now
+ end
+ ```
+
+ edit: i found an easier solution for timestamps
 
 ##Technologies used
--Ruby on Rails
--Resources of WDI General Assembly
--devise - for login authentication
--imgur - for free image hosting
--function linkify(inputText) http://stackoverflow.com/questions/37684/how-to-replace-plain-urls-with-links
+--Ruby on Rails
+--Resources of WDI General Assembly
+--devise - for login authentication
+--imgur - for free image hosting
+--function linkify(inputText) http://stackoverflow.com/questions/37684/how-to-replace-plain-urls-with-links
