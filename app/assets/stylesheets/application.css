@@ -1,5 +1,5 @@
 body{
-  background-image: url("sky.jpg");
+  background-image: image-url("sky.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -7,7 +7,7 @@ h1{
   text-align: center;
   font-family: 'Bangers', cursive;
   font-size: 60px;
-  background-image: url("sign.png");
+  background-image: image-url("sign.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
