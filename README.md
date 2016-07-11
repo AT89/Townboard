@@ -1,7 +1,12 @@
-#GA Project 2: Electric Boogaloo
+#GA Project 2: Electric Boogaloo <!-- NHO: love the Always Sunny reference! -->
+
+<!-- NHO: nice job writing up your thoughts, in the future I would recommend getting familiar with
+  Github flavored Markdown, as it a little effort can massively improve formatting!
+  https://guides.github.com/features/mastering-markdown/
+  -->
 
 ##GA bulletin board
--- Generally wanted to a Ruby on Rails app that can simply be a 'town board'. Users are people who are in the same location. This essentially bypasses Craigslist because the additional step of meeting someone is eliminated, since you are both in the same/near location.
+-- Generally wanted to build a Ruby on Rails app that can simply be a 'town board'. Users are people who are in the same location. This essentially bypasses Craigslist because the additional step of meeting someone is eliminated, since you are both in the same/near location.
 
 More implications of this can be used for Pokemon Go, other game pickups, meetups, collaboration postings
 
