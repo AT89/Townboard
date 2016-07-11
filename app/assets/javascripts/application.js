@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+// NHO: Is this a 3rd party function? If so make sure to site your source!
 $(function(){
   function linkify(inputText) {
       var replacedText, replacePattern1, replacePattern2, replacePattern3;
@@ -32,6 +34,9 @@ $(function(){
 
       return replacedText;
   }
+
+  // NHO: What's the purpose of this? Might be a better idea to implement this as a
+  // helper method which you could use directly in the view
   $(".bodytext").each(function(){
       $(this).html(linkify($(this).html()))
   })

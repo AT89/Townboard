@@ -11,12 +11,13 @@
       <th width="5%">Comments</th>
       <th width="20%">Last update</th>
    </tr>
-
+    <!-- NHO: it's definetly more Ruby like to use `.each` here for enumeration  -->
     <% for post in @board.posts %>
       <tr>
         <td class="left"><%= link_to (post.title), board_post_path(@board, post) %></td>
         <td class="middle"><%= post.comments.count %></td>
         <td class="right"><%= post.updated_at.localtime.to_formatted_s(:short) %></td>
+        <!--# NHO: v Make sure you pass the appropriate objects to this Path!   -->
         <td><%= link_to "Edit", edit_board_post_path(post) %></td>
         <td><%= link_to "Destroy", board_post_path(@board, post), :confirm => 'Are you sure?', :method => :delete %></td>
       </tr>

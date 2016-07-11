@@ -49,3 +49,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'pry'
 gem "rails_12factor", group: :production
+
+# NHO: one general piece of advice is to get in the habbit of organizing your gems
+# I generally sort my gem's into two categories: out of the box, and custom; and alphabetize each category
