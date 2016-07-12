@@ -1,4 +1,11 @@
 #GA Project 2: Electric Boogaloo
+##No one is going to use this unless its super super cute
+
+##Captains log
+--Edit/Delete functions on boards except the first board do not work. Need to work on that..
+--User logins
+--QOL - adding arrows on viewing comments/posts
+--more cute animation
 
 ##GA bulletin board
 -- Generally wanted to a Ruby on Rails app that can simply be a 'town board'. Users are people who are in the same location. This essentially bypasses Craigslist because the additional step of meeting someone is eliminated, since you are both in the same/near location.
